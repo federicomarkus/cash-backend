@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cash-app:war">
+    <output-path>$PROJECT_DIR$/cash-app/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cash-app</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cash-app-1.0.0.war">
+      <element id="artifact" artifact-name="cash-app:war exploded" />
+    </root>
+  </artifact>
+</component>

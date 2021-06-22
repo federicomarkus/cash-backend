@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet author="fmarkus" id="v001_1">
+        <createTable tableName="user">
+            <column autoIncrement="true" name="id" type="bigint(20)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+            <column name="email" type="varchar(255)"/>
+            <column name="first_name" type="varchar(255)"/>
+            <column name="last_name" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="fmarkus" author="v001_2">
+        <sql>
+            INSERT INTO user(id, email, first_name, last_name) VALUES (1, "test@app.com.ar", "Pepe", "Argento");
+            INSERT INTO user(id, email, first_name, last_name) VALUES (2, "federicomarkus@gmail.com", "Federico", "Markus");
+            INSERT INTO user(id, email, first_name, last_name) VALUES (3, "elon.musk@spacex.com", "Elon", "Musk");
+            INSERT INTO user(id, email, first_name, last_name) VALUES (4, "billgates@outlook.com", "Bill", "Gates");
+            INSERT INTO user(id, email, first_name, last_name) VALUES (5, "jeffbezos@amazon.com", "Jeff", "Bezos");
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
